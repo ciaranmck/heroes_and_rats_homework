@@ -1,13 +1,13 @@
 var Hero = function(name) {
   this.name = name;
   this.health = 100;
-  // this.favouriteFood = favouriteFood;
+  this.favouriteFood = null;
   // this.speak = speak;
   this.task = [];
 }
 
-Hero.prototype.getFavouriteFood = function() {
-  return this.favouriteFood;
+Hero.prototype.setFavouriteFood = function(favouriteFood) {
+  this.favouriteFood = favouriteFood;
 }
 
 

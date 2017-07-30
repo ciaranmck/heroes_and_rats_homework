@@ -20,4 +20,9 @@ describe("Hero", function() {
     assert.strictEqual(100, heroTwo.health);
   })
 
+  it("should have a favourite food", function() {
+    heroOne.setFavouriteFood("Pizza")
+    assert.strictEqual("Pizza", heroOne.favouriteFood);
+  })
+
 });
