@@ -13,5 +13,9 @@ describe("Task", function() {
     assert.strictEqual(saveTheUniverse.difficulty, 10);
   })
 
+  it("should have an urgency", function() {
+    assert.strictEqual(saveTheUniverse.urgency, 10);
+  })
+
 });
 
