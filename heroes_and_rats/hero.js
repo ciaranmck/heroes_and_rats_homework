@@ -15,7 +15,12 @@ Hero.prototype.setSpeech = function(speak) {
 }
 
 Hero.prototype.eatFood = function(food) {
-  this.health += food.replenishmentValue
+  if(this.favouriteFood === food.type) {
+  this.health += food.replenishmentValue * 2
+  }
+  else {
+    this.health += food.replenishmentValue
+  }
 }
 
 

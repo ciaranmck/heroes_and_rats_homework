@@ -10,6 +10,7 @@ describe("Hero", function() {
   beforeEach(function() {
     heroOne = new Hero("Rick");
     itemOne = new Food("Szechuan Sauce", 3);
+    itemTwo = new Food("Burger", 10);
   });
 
   it("should have a name", function() {
@@ -35,8 +36,10 @@ describe("Hero", function() {
   })
 
   it("can eat food and gain health", function() {
+    heroOne.setFavouriteFood("Szechuan Sauce");
     heroOne.eatFood(itemOne)
-    assert.strictEqual(103, heroOne.health);
+    heroOne.eatFood(itemTwo)
+    assert.strictEqual(116, heroOne.health);
   })
 
 
