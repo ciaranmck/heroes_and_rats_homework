@@ -35,7 +35,12 @@ Hero.prototype.sortTasksByDifficulty = function() {
     return +1;
     return 0; 
   });
-  return this.tasks;
+
+  Hero.prototype.removeFirstTaskFromArray = function() {
+    var removedTask =  this.tasks.splice(0, 1);
+    return removedTask;
+  }
+
 };
 
 

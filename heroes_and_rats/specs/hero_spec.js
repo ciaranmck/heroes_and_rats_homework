@@ -58,7 +58,11 @@ describe("Hero", function() {
     heroOne.addTask(saveMorty);
 
     assert.strictEqual(3, heroOne.tasks.length);
-    assert.strictEqual(3, heroOne.sortTasksByDifficulty());
+
+    heroOne.sortTasksByDifficulty();
+    
+    assert.strictEqual(takeOutTheRubbish.difficulty, heroOne.removeFirstTaskFromArray());
+
   });
 
 
