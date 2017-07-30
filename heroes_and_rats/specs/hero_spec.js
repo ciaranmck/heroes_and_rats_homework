@@ -54,10 +54,12 @@ describe("Hero", function() {
 
   it("can sort tasks by difficulty", function() {
     heroOne.addTask(saveTheUniverse);
-    heroOne.addTask(saveMorty);
     heroOne.addTask(takeOutTheRubbish);
+    heroOne.addTask(saveMorty);
+
     assert.strictEqual(3, heroOne.tasks.length);
-  })
+    assert.strictEqual(3, heroOne.sortTasksByDifficulty());
+  });
 
 
 
