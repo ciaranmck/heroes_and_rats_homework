@@ -60,8 +60,8 @@ describe("Hero", function() {
     assert.strictEqual(3, heroOne.tasks.length);
 
     heroOne.sortTasksByDifficulty();
-    
-    assert.strictEqual(takeOutTheRubbish.difficulty, heroOne.removeFirstTaskFromArray());
+
+    assert.strictEqual(takeOutTheRubbish, heroOne.removeFirstTaskFromArray());
 
   });
 
