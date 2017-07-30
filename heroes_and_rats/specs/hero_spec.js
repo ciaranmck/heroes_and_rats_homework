@@ -7,22 +7,24 @@ describe("Hero", function() {
 
   beforeEach(function() {
     heroOne = new Hero("Rick");
-    heroTwo = new Hero("Morty");
   });
 
   it("should have a name", function() {
     assert.strictEqual(heroOne.name, "Rick");
-    assert.strictEqual(heroTwo.name, "Morty")
   });
 
   it("should start with full health", function() {
     assert.strictEqual(100, heroOne.health);
-    assert.strictEqual(100, heroTwo.health);
   })
 
   it("should have a favourite food", function() {
-    heroOne.setFavouriteFood("Pizza")
-    assert.strictEqual("Pizza", heroOne.favouriteFood);
+    heroOne.setFavouriteFood("Szechuan Sauce");
+    assert.strictEqual("Szechuan Sauce", heroOne.favouriteFood);
+  })
+
+  it("should be able to speak", function() {
+    heroOne.setSpeech("Wubalubadubdub!!");
+    assert.strictEqual("Wubalubadubdub!!", heroOne.speak);
   })
 
 });

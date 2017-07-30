@@ -2,12 +2,16 @@ var Hero = function(name) {
   this.name = name;
   this.health = 100;
   this.favouriteFood = null;
-  // this.speak = speak;
+  this.speak = null;
   this.task = [];
 }
 
 Hero.prototype.setFavouriteFood = function(favouriteFood) {
   this.favouriteFood = favouriteFood;
+}
+
+Hero.prototype.setSpeech = function(speak) {
+  this.speak = speak;
 }
 
 
