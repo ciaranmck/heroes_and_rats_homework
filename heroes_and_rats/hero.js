@@ -3,7 +3,7 @@ var Hero = function(name) {
   this.health = 100;
   this.favouriteFood = null;
   this.speak = null;
-  this.task = [];
+  this.tasks = [];
 }
 
 Hero.prototype.setFavouriteFood = function(favouriteFood) {
@@ -21,6 +21,10 @@ Hero.prototype.eatFood = function(food) {
   else {
     this.health += food.replenishmentValue
   }
+}
+
+Hero.prototype.addTask = function(task) {
+  this.tasks.push(task)
 }
 
 
