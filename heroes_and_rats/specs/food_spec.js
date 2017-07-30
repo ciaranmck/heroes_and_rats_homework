@@ -13,4 +13,8 @@ describe("Food", function() {
     assert.strictEqual(itemOne.type, "Szechuan Sauce");
   });
 
+  it("should have a replenishment value", function() {
+    assert.strictEqual(itemOne.replenishmentValue, 3);
+  });
+
 });
