@@ -27,7 +27,7 @@ describe("Hero", function() {
     assert.strictEqual("Wubalubadubdub!!", heroOne.speak);
   })
 
-  it("should have start with an empty array of tasks", function() {
+  it("should start with an empty array of tasks", function() {
     assert.strictEqual(0, heroOne.task.length);
   })
 
