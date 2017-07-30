@@ -27,6 +27,13 @@ Hero.prototype.addTask = function(task) {
   this.tasks.push(task)
 }
 
+Hero.prototype.sortTasksByDifficulty = function() {
+  var tempArray = []
+  for(var task of this.tasks) {
+    task.difficulty.sort;
+  }
+}
+
 
 
 

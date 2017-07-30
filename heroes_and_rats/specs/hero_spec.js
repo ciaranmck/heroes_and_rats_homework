@@ -14,6 +14,8 @@ describe("Hero", function() {
     itemOne = new Food("Szechuan Sauce", 3);
     itemTwo = new Food("Burger", 10);
     saveTheUniverse = new Task(10, 10, 100);
+    saveMorty = new Task(4, 8, 80);
+    takeOutTheRubbish = new Task(1, 1, 10);
   });
 
   it("should have a name", function() {
@@ -48,6 +50,13 @@ describe("Hero", function() {
   it("can add a task to the array", function() {
     heroOne.addTask(saveTheUniverse);
     assert.strictEqual(1, heroOne.tasks.length);
+  })
+
+  it("can sort tasks by difficulty", function() {
+    heroOne.addTask(saveTheUniverse);
+    heroOne.addTask(saveMorty);
+    heroOne.addTask(takeOutTheRubbish);
+    assert.strictEqual(3, heroOne.tasks.length);
   })
 
 
