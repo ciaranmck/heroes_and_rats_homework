@@ -13,9 +13,9 @@ describe("Hero", function() {
     heroOne = new Hero("Rick");
     itemOne = new Food("Szechuan Sauce", 3);
     itemTwo = new Food("Burger", 10);
-    saveTheUniverse = new Task(10, 10, 100);
-    saveMorty = new Task(4, 8, 80);
-    takeOutTheRubbish = new Task(1, 1, 10);
+    saveTheUniverse = new Task(10, 10, 100, false);
+    saveMorty = new Task(4, 8, 80, true);
+    takeOutTheRubbish = new Task(1, 1, 10, true);
   });
 
   it("should have a name", function() {
@@ -62,21 +62,15 @@ describe("Hero", function() {
     heroOne.sortTasksByDifficulty();
 
     assert.strictEqual(takeOutTheRubbish, heroOne.removeFirstTaskFromArray());
+    });
 
+    it("can mark a task as completed", function() {
+      heroOne.addTask(saveTheUniverse);
+      heroOne.addTask(takeOutTheRubbish);
+      heroOne.addTask(saveMorty);
+
+      assert.strictEqual("Task not complete", heroOne.checkTasksAreComplete());
+    
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });

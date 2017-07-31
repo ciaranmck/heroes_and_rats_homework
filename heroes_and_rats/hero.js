@@ -41,6 +41,17 @@ Hero.prototype.sortTasksByDifficulty = function() {
     return removedTask;
   }
 
+  Hero.prototype.checkTasksAreComplete = function() {
+    for(task of this.tasks) {
+      if(task.complete === false) {
+        return "Task not complete"
+      } 
+      else {
+        return "Task Completed!"
+      }
+    }
+  }
+
 };
 
 
